@@ -33,6 +33,46 @@ public class EventController {
 		return this.eventRepository.findAll();
 	}
 	
+	@GetMapping("/byName/{name}")
+	public List<Event> byName(@PathVariable(value ="name") String name) {
+		return this.eventRepository.findAllByName(name);
+	}
+	
+	@GetMapping("/byDate/{date}")
+	public List<Event> byDate(@PathVariable(value ="date") String date) {
+		return this.eventRepository.findAllByDate(date);
+	}
+	
+	@GetMapping("/byRegion/{region}")
+	public List<Event> byRegion(@PathVariable(value ="region") String region) {
+		return this.eventRepository.findAllByRegion(region);
+	}
+	
+	@GetMapping("/byType/{type}")
+	public List<Event> byType(@PathVariable(value ="type") String type) {
+		return this.eventRepository.findAllByType(type);
+	}
+	
+	@GetMapping("/byContact/{contact}")
+	public List<Event> byContact(@PathVariable(value ="contact") String contact) {
+		return this.eventRepository.findAllByContact(contact);
+	}
+	
+	@GetMapping("/byPicture/{picture}")
+	public List<Event> byPicture(@PathVariable(value ="picture") String picture) {
+		return this.eventRepository.findAllByPicture(picture);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Event> byDescription(@PathVariable(value ="description") String description) {
+		return this.eventRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byPrice/{price}")
+	public List<Event> byPrice(@PathVariable(value ="price") String price) {
+		return this.eventRepository.findAllByPrice(price);
+	}
+	
 	//get event by id
 	@GetMapping("/event/{id}")
 	public ResponseEntity<Event> getEventById(@PathVariable(value = "id") Long eventId)

@@ -34,6 +34,36 @@ public class AdvertController {
 			return this.advertRepository.findAll();
 	}
 	
+	@GetMapping("/byName/{name}")
+	public List<Advert> byName(@PathVariable(value ="name") String name) {
+		return this.advertRepository.findAllByName(name);
+	}
+	
+	@GetMapping("/byCompany/{company}")
+	public List<Advert> byCompany(@PathVariable(value ="company") String company) {
+		return this.advertRepository.findAllByCompany(company);
+	}
+	
+	@GetMapping("/byDuration/{duration}")
+	public List<Advert> byDuration(@PathVariable(value ="duration") String duration) {
+		return this.advertRepository.findAllByDuration(duration);
+	}
+	
+	@GetMapping("/byCategory/{category}")
+	public List<Advert> byCategory(@PathVariable(value ="category") String category) {
+		return this.advertRepository.findAllByCategory(category);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Advert> byDescription(@PathVariable(value ="description") String description) {
+		return this.advertRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byPrice/{price}")
+	public List<Advert> byPrice(@PathVariable(value ="price") String price) {
+		return this.advertRepository.findAllByPrice(price);
+	}
+	
 	//get advert by id
 	@GetMapping("/advert/{id}")
 	public ResponseEntity<Advert> getAdvertById(@PathVariable(value = "id") Long advertId)

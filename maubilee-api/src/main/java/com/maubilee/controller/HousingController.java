@@ -34,6 +34,52 @@ public class HousingController {
 		return this.housingRepository.findAll();
 	}
 	
+	@GetMapping("/byTitle/{title}")
+	public List<Housing> byTitle(@PathVariable(value ="title") String title) {
+		return this.housingRepository.findAllByTitle(title);
+	}
+	
+	@GetMapping("/bySurface/{surface}")
+	public List<Housing> bySurface(@PathVariable(value ="surface") String surface) {
+		return this.housingRepository.findAllBySurface(surface);
+	}
+	
+	@GetMapping("/byRegion/{region}")
+	public List<Housing> byRegion(@PathVariable(value ="region") String region) {
+		return this.housingRepository.findAllByRegion(region);
+	}
+	
+	@GetMapping("/byBedroom/{bedroom}")
+	public List<Housing> byBedroom(@PathVariable(value ="bedroom") String bedroom) {
+		return this.housingRepository.findAllByBedroom(bedroom);
+	}
+
+	@GetMapping("/byBathroom/{bathroom}")
+	public List<Housing> byBathroom(@PathVariable(value ="bathroom") String bathroom) {
+		return this.housingRepository.findAllByBathroom(bathroom);
+	}
+	
+	@GetMapping("/byContact/{contact}")
+	public List<Housing> byContact(@PathVariable(value ="contact") String contact) {
+		return this.housingRepository.findAllByContact(contact);
+	}
+	
+	@GetMapping("/byPicture/{picture}")
+	public List<Housing> byPicture(@PathVariable(value ="picture") String picture) {
+		return this.housingRepository.findAllByPicture(picture);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Housing> byDescription(@PathVariable(value ="description") String description) {
+		return this.housingRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byPrice/{price}")
+	public List<Housing> byPrice(@PathVariable(value ="price") String price) {
+		return this.housingRepository.findAllByPrice(price);
+	}
+	
+	
 	//get housing by id
 	@GetMapping("/housing/{id}")
 	public ResponseEntity<Housing> getHousingById(@PathVariable(value = "id") Long housingId)

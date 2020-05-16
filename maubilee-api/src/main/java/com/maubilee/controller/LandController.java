@@ -34,6 +34,41 @@ public class LandController {
 		return this.landRepository.findAll();
 	}
 	
+	@GetMapping("/byTitle/{title}")
+	public List<Land> byTitle(@PathVariable(value ="title") String title) {
+		return this.landRepository.findAllByTitle(title);
+	}
+	
+	@GetMapping("/bySurface/{surface}")
+	public List<Land> bySurface(@PathVariable(value ="surface") String surface) {
+		return this.landRepository.findAllBySurface(surface);
+	}
+	
+	@GetMapping("/byRegion/{region}")
+	public List<Land> byRegion(@PathVariable(value ="region") String region) {
+		return this.landRepository.findAllByRegion(region);
+	}
+		
+	@GetMapping("/byContact/{contact}")
+	public List<Land> byContact(@PathVariable(value ="contact") String contact) {
+		return this.landRepository.findAllByContact(contact);
+	}
+	
+	@GetMapping("/byPicture/{picture}")
+	public List<Land> byPicture(@PathVariable(value ="picture") String picture) {
+		return this.landRepository.findAllByPicture(picture);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Land> byDescription(@PathVariable(value ="description") String description) {
+		return this.landRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byPrice/{price}")
+	public List<Land> byPrice(@PathVariable(value ="price") String price) {
+		return this.landRepository.findAllByPrice(price);
+	}
+	
 	//get land by id
 	@GetMapping("/land/{id}")
 	public ResponseEntity<Land> getLandById(@PathVariable(value = "id") Long landId)

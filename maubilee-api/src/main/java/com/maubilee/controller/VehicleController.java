@@ -34,6 +34,56 @@ public class VehicleController {
 		return this.vehicleRepository.findAll();
 	}
 	
+	@GetMapping("/byName/{name}")
+	public List<Vehicle> byName(@PathVariable(value ="name") String name) {
+		return this.vehicleRepository.findAllByName(name);
+	}
+	
+	@GetMapping("/byMake/{make}")
+	public List<Vehicle> byMake(@PathVariable(value ="make") String make) {
+		return this.vehicleRepository.findAllByMake(make);
+	}
+	
+	@GetMapping("/byType/{type}")
+	public List<Vehicle> byType(@PathVariable(value ="type") String type) {
+		return this.vehicleRepository.findAllByType(type);
+	}
+	
+	@GetMapping("/byTransmission/{transmission}")
+	public List<Vehicle> byTransmission(@PathVariable(value ="transmission") String transmission) {
+		return this.vehicleRepository.findAllByTransmission(transmission);
+	}
+	
+	@GetMapping("/byContact/{contact}")
+	public List<Vehicle> byContact(@PathVariable(value ="contact") String contact) {
+		return this.vehicleRepository.findAllByContact(contact);
+	}
+
+	@GetMapping("/byYear/{year}")
+	public List<Vehicle> byYear(@PathVariable(value ="year") String year) {
+		return this.vehicleRepository.findAllByYear(year);
+	}
+	
+	@GetMapping("/byOptions/{contact}")
+	public List<Vehicle> byOptions(@PathVariable(value ="options") String options) {
+		return this.vehicleRepository.findAllByOptions(options);
+	}
+	
+	@GetMapping("/byPicture/{picture}")
+	public List<Vehicle> byPicture(@PathVariable(value ="picture") String picture) {
+		return this.vehicleRepository.findAllByPicture(picture);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Vehicle> byDescription(@PathVariable(value ="description") String description) {
+		return this.vehicleRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byPrice/{price}")
+	public List<Vehicle> byPrice(@PathVariable(value ="price") String price) {
+		return this.vehicleRepository.findAllByPrice(price);
+	}
+	
 	//get vehicle by id
 	@GetMapping("/vehicle/{id}")
 	public ResponseEntity<Vehicle> getVehicleById(@PathVariable(value = "id") Long vehicleId)

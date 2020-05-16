@@ -34,6 +34,51 @@ public class JobController {
 		return this.jobRepository.findAll();
 	}
 	
+	@GetMapping("/byTitle/{title}")
+	public List<Job> byTitle(@PathVariable(value ="title") String title) {
+		return this.jobRepository.findAllByTitle(title);
+	}
+	
+	@GetMapping("/byField/{field}")
+	public List<Job> byField(@PathVariable(value ="field") String field) {
+		return this.jobRepository.findAllByField(field);
+	}
+	
+	@GetMapping("/byRegion/{region}")
+	public List<Job> byRegion(@PathVariable(value ="region") String region) {
+		return this.jobRepository.findAllByRegion(region);
+	}
+	
+	@GetMapping("/byType/{type}")
+	public List<Job> byType(@PathVariable(value ="type") String type) {
+		return this.jobRepository.findAllByType(type);
+	}
+
+	@GetMapping("/bySalary/{salary}")
+	public List<Job> bySalary(@PathVariable(value ="salary") String salary) {
+		return this.jobRepository.findAllBySalary(salary);
+	}
+	
+	@GetMapping("/byContact/{contact}")
+	public List<Job> byContact(@PathVariable(value ="contact") String contact) {
+		return this.jobRepository.findAllByContact(contact);
+	}
+	
+	@GetMapping("/byPicture/{picture}")
+	public List<Job> byPicture(@PathVariable(value ="picture") String picture) {
+		return this.jobRepository.findAllByPicture(picture);
+	}
+	
+	@GetMapping("/byDescription/{description}")
+	public List<Job> byDescription(@PathVariable(value ="description") String description) {
+		return this.jobRepository.findAllByDescription(description);
+	}
+	
+	@GetMapping("/byCompany/{company}")
+	public List<Job> byCompany(@PathVariable(value ="company") String company) {
+		return this.jobRepository.findAllByCompany(company);
+	}
+	
 	//get job by id
 	@GetMapping("/job/{id}")
 	public ResponseEntity<Job> getJobById(@PathVariable(value = "id") Long jobId)
