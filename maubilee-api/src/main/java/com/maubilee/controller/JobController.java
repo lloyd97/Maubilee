@@ -34,47 +34,47 @@ public class JobController {
 		return this.jobRepository.findAll();
 	}
 	
-	@GetMapping("/byTitle/{title}")
+	@GetMapping("/job/byTitle/{title}")
 	public List<Job> byTitle(@PathVariable(value ="title") String title) {
 		return this.jobRepository.findAllByTitle(title);
 	}
 	
-	@GetMapping("/byField/{field}")
+	@GetMapping("/job/byField/{field}")
 	public List<Job> byField(@PathVariable(value ="field") String field) {
 		return this.jobRepository.findAllByField(field);
 	}
 	
-	@GetMapping("/byRegion/{region}")
+	@GetMapping("/job/byRegion/{region}")
 	public List<Job> byRegion(@PathVariable(value ="region") String region) {
 		return this.jobRepository.findAllByRegion(region);
 	}
 	
-	@GetMapping("/byType/{type}")
+	@GetMapping("/job/byType/{type}")
 	public List<Job> byType(@PathVariable(value ="type") String type) {
 		return this.jobRepository.findAllByType(type);
 	}
 
-	@GetMapping("/bySalary/{salary}")
+	@GetMapping("/job/bySalary/{salary}")
 	public List<Job> bySalary(@PathVariable(value ="salary") String salary) {
 		return this.jobRepository.findAllBySalary(salary);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/job/byContact/{contact}")
 	public List<Job> byContact(@PathVariable(value ="contact") String contact) {
 		return this.jobRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/job/byPicture/{picture}")
 	public List<Job> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.jobRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/job/byDescription/{description}")
 	public List<Job> byDescription(@PathVariable(value ="description") String description) {
 		return this.jobRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byCompany/{company}")
+	@GetMapping("/job/byCompany/{company}")
 	public List<Job> byCompany(@PathVariable(value ="company") String company) {
 		return this.jobRepository.findAllByCompany(company);
 	}

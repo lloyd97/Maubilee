@@ -34,42 +34,42 @@ public class MarketController {
 		return this.marketRepository.findAll();
 	}
 	
-	@GetMapping("/byName/{name}")
+	@GetMapping("/market/byName/{name}")
 	public List<Market> byName(@PathVariable(value ="name") String name) {
 		return this.marketRepository.findAllByName(name);
 	}
 	
-	@GetMapping("/byDuration/{duration}")
+	@GetMapping("/market/byDuration/{duration}")
 	public List<Market> byDuration(@PathVariable(value ="duration") String duration) {
 		return this.marketRepository.findAllByDuration(duration);
 	}
 	
-	@GetMapping("/byRegion/{region}")
+	@GetMapping("/market/byRegion/{region}")
 	public List<Market> byRegion(@PathVariable(value ="region") String region) {
 		return this.marketRepository.findAllByRegion(region);
 	}
 	
-	@GetMapping("/byItem/{item}")
+	@GetMapping("/market/byItem/{item}")
 	public List<Market> byItem(@PathVariable(value ="item") String item) {
 		return this.marketRepository.findAllByItem(item);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/market/byContact/{contact}")
 	public List<Market> byContact(@PathVariable(value ="contact") String contact) {
 		return this.marketRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/market/byPicture/{picture}")
 	public List<Market> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.marketRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/market/byDescription/{description}")
 	public List<Market> byDescription(@PathVariable(value ="description") String description) {
 		return this.marketRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byPrice/{price}")
+	@GetMapping("/market/byPrice/{price}")
 	public List<Market> byPrice(@PathVariable(value ="price") String price) {
 		return this.marketRepository.findAllByPrice(price);
 	}

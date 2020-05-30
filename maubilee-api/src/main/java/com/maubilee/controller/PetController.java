@@ -34,42 +34,42 @@ public class PetController {
 		return this.petRepository.findAll();
 	}
 	
-	@GetMapping("/byName/{name}")
+	@GetMapping("/pet/byName/{name}")
 	public List<Pet> byName(@PathVariable(value ="name") String name) {
 		return this.petRepository.findAllByName(name);
 	}
 	
-	@GetMapping("/byDuration/{duration}")
+	@GetMapping("/pet/byDuration/{duration}")
 	public List<Pet> byDuration(@PathVariable(value ="duration") String duration) {
 		return this.petRepository.findAllByType(duration);
 	}
 	
-	@GetMapping("/byPetshop/{petshop}")
+	@GetMapping("/pet/byPetshop/{petshop}")
 	public List<Pet> byPetshop(@PathVariable(value ="petshop") String petshop) {
 		return this.petRepository.findAllByPetshop(petshop);
 	}
 	
-	@GetMapping("/byBreed/{breed}")
+	@GetMapping("/pet/byBreed/{breed}")
 	public List<Pet> byBreed(@PathVariable(value ="breed") String breed) {
 		return this.petRepository.findAllByBreed(breed);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/pet/byContact/{contact}")
 	public List<Pet> byContact(@PathVariable(value ="contact") String contact) {
 		return this.petRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/pet/byPicture/{picture}")
 	public List<Pet> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.petRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/pet/byDescription/{description}")
 	public List<Pet> byDescription(@PathVariable(value ="description") String description) {
 		return this.petRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byPrice/{price}")
+	@GetMapping("/pet/byPrice/{price}")
 	public List<Pet> byPrice(@PathVariable(value ="price") String price) {
 		return this.petRepository.findAllByPrice(price);
 	}	

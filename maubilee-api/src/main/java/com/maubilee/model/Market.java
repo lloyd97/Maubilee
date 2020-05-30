@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="marketcategory")
+@Table(name="Market")
 public class Market {
 
 	@Id

@@ -38,80 +38,80 @@ public class UserController {
 		return this.userRepository.findAll();
 	}
 	
-	@GetMapping("/byFirstName/{firstname}")
+	/*@GetMapping("/user/byFirstName/{firstname}")
 	public List<User> byName(@PathVariable(value ="firstname") String firstname) {
 		return this.userRepository.findAllByFirstname(firstname);
 	}
 	
-	@GetMapping("/byLastName/{lastname}")
+	@GetMapping("/user/byLastName/{lastname}")
 	public List<User> byLastName(@PathVariable(value ="lastname") String lastname) {
 		return this.userRepository.findAllByLastname(lastname);
 	}
 	
-	@GetMapping("/byEmail/{email}")
+	@GetMapping("/user/byEmail/{email}")
 	public List<User> byEmail(@PathVariable(value ="email") String email) {
 		return this.userRepository.findAllByEmail(email);
 	}
 	
-	@GetMapping("/byPassword/{password}")
+	@GetMapping("/user/byPassword/{password}")
 	public List<User> byPassword(@PathVariable(value ="password") String password) {
 		return this.userRepository.findAllByFirstname(password);
 	}
 	
-	@GetMapping("/byRole/{role}")
+	@GetMapping("/user/byRole/{role}")
 	public List<User> byRole(@PathVariable(value ="role") String role) {
 		return this.userRepository.findAllByFirstname(role);
 	}
 	
-	@GetMapping("/byRegion/{region}")
+	@GetMapping("/user/byRegion/{region}")
 	public List<User> byRegion(@PathVariable(value ="region") String region) {
 		return this.userRepository.findAllByFirstname(region);
 	}
 	
-	@GetMapping("/byCity/{city}")
+	@GetMapping("/user/byCity/{city}")
 	public List<User> byCity(@PathVariable(value ="city") String city) {
 		return this.userRepository.findAllByFirstname(city);
 	}
 	
-	@GetMapping("/byDob/{dob}")
+	@GetMapping("/user/byDob/{dob}")
 	public List<User> byDob(@PathVariable(value ="dob") String dob) {
 		return this.userRepository.findAllByFirstname(dob);
 	}
 	
-	@GetMapping("/byIsactive/{isactive}")
+	@GetMapping("/user/byIsactive/{isactive}")
 	public List<User> byIsactive(@PathVariable(value ="isactive") String isactive) {
 		return this.userRepository.findAllByFirstname(isactive);
 	}
 	
-	@GetMapping("/byPhone/{phone}")
+	@GetMapping("/user/byPhone/{phone}")
 	public List<User> byPhone(@PathVariable(value ="phone") String phone) {
 		return this.userRepository.findAllByFirstname(phone);
 	}
 	
-	@GetMapping("/byRecovercode/{recovercode}")
+	@GetMapping("/user/byRecovercode/{recovercode}")
 	public List<User> byRecovercode(@PathVariable(value ="recovercode") String recovercode) {
 		return this.userRepository.findAllByFirstname(recovercode);
 	}
 	
-	@GetMapping("/byLocation/{location}")
+	@GetMapping("/user/byLocation/{location}")
 	public List<User> byLocation(@PathVariable(value ="location") String location) {
 		return this.userRepository.findAllByFirstname(location);
 	}
 	
-	@GetMapping("/byPhoto/{photo}")
+	@GetMapping("/user/byPhoto/{photo}")
 	public List<User> byPhoto(@PathVariable(value ="photo") String photo) {
 		return this.userRepository.findAllByFirstname(photo);
 	}
 	
-	@GetMapping("/byIsdangerous/{isdangerous}")
+	@GetMapping("/user/byIsdangerous/{isdangerous}")
 	public List<User> byIsdangerous(@PathVariable(value ="isdangerous") String isdangerous) {
 		return this.userRepository.findAllByFirstname(isdangerous);
 	}
 	
-	@GetMapping("/byPreferences/{preferences}")
+	@GetMapping("/user/byPreferences/{preferences}")
 	public List<User> byPreferences(@PathVariable(value ="preferences") String preferences) {
 		return this.userRepository.findAllByFirstname(preferences);
-	}
+	}*/
 	
 	//get user by id
 	@GetMapping("/user/{id}")

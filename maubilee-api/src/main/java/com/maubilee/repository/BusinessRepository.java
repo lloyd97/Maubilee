@@ -9,7 +9,7 @@ import com.maubilee.model.Business;
 
 public interface BusinessRepository extends JpaRepository<Business,Long> {
 
-	@Query("FROM maubileebusiness WHERE name = ?1")
+	/*@Query("FROM maubileebusiness WHERE name = ?1")
 	List<Business> findAllByName(String name);
 			
 	@Query("FROM maubileebusiness WHERE city = ?1")
@@ -59,7 +59,7 @@ public interface BusinessRepository extends JpaRepository<Business,Long> {
 		
 	@Query("FROM maubileebusiness WHERE packages = ?1")
 	List<Business> findAllByPackages(String packages);
-	
+	*/
 	
 	
 }

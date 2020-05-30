@@ -9,25 +9,25 @@ import com.maubilee.model.Land;
 
 public interface LandRepository extends JpaRepository<Land,Long>{
 
-	@Query("FROM landcategory WHERE title = ?1")
+	@Query("FROM Land WHERE title = ?1")
 	List<Land> findAllByTitle(String title);
 	
-	@Query("FROM landcategory WHERE surface = ?1")
+	@Query("FROM Land WHERE surface = ?1")
 	List<Land> findAllBySurface(String surface);
 		
-	@Query("FROM landcategory WHERE region = ?1")
+	@Query("FROM Land WHERE region = ?1")
 	List<Land> findAllByRegion(String region);
 		
-	@Query("FROM landcategory WHERE picture = ?1")
+	@Query("FROM Land WHERE picture = ?1")
 	List<Land> findAllByPicture(String picture);
 	
-	@Query("FROM landcategory WHERE contact = ?1")
+	@Query("FROM Land WHERE contact = ?1")
 	List<Land> findAllByContact(String contact);
 
-	@Query("FROM landcategory WHERE description = ?1")
+	@Query("FROM Land WHERE description = ?1")
 	List<Land> findAllByDescription(String description);
 		
-	@Query("FROM landcategory WHERE price = ?1")
+	@Query("FROM Land WHERE price = ?1")
 	List<Land> findAllByPrice(String price);
 	
 }

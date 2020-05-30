@@ -34,42 +34,42 @@ public class LeisureController {
 		return this.leisureRepository.findAll();
 	}
 	
-	@GetMapping("/byName/{name}")
+	@GetMapping("/leisure/byName/{name}")
 	public List<Leisure> byName(@PathVariable(value ="name") String name) {
 		return this.leisureRepository.findAllByName(name);
 	}
 	
-	@GetMapping("/byDuration/{duration}")
+	@GetMapping("/leisure/byDuration/{duration}")
 	public List<Leisure> byDuration(@PathVariable(value ="duration") String duration) {
 		return this.leisureRepository.findAllByDuration(duration);
 	}
 	
-	@GetMapping("/byPackages/{packages}")
+	@GetMapping("/leisure/byPackages/{packages}")
 	public List<Leisure> byPackages(@PathVariable(value ="packages") String packages) {
 		return this.leisureRepository.findAllByPackages(packages);
 	}
 	
-	@GetMapping("/byItem/{item}")
+	@GetMapping("/leisure/byItem/{item}")
 	public List<Leisure> byItem(@PathVariable(value ="item") String item) {
 		return this.leisureRepository.findAllByItem(item);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/leisure/byContact/{contact}")
 	public List<Leisure> byContact(@PathVariable(value ="contact") String contact) {
 		return this.leisureRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/leisure/byPicture/{picture}")
 	public List<Leisure> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.leisureRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/leisure/byDescription/{description}")
 	public List<Leisure> byDescription(@PathVariable(value ="description") String description) {
 		return this.leisureRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byCategory/{category}")
+	@GetMapping("/leisure/byCategory/{category}")
 	public List<Leisure> byCategory(@PathVariable(value ="category") String category) {
 		return this.leisureRepository.findAllByCategory(category);
 	}

@@ -34,42 +34,42 @@ public class TravelController {
 		return this.travelRepository.findAll();
 	}
 	
-	@GetMapping("/byName/{name}")
+	@GetMapping("/travel/byName/{name}")
 	public List<Travel> byName(@PathVariable(value ="name") String name) {
 		return this.travelRepository.findAllByName(name);
 	}
 	
-	@GetMapping("/byEnddate/{enddate}")
+	@GetMapping("/travel/byEnddate/{enddate}")
 	public List<Travel> byEnddate(@PathVariable(value ="enddate") String enddate) {
 		return this.travelRepository.findAllByEnddate(enddate);
 	}
 	
-	@GetMapping("/byDestination/{destination}")
+	@GetMapping("/travel/byDestination/{destination}")
 	public List<Travel> byDestination(@PathVariable(value ="destination") String destination) {
 		return this.travelRepository.findAllByDestination(destination);
 	}
 	
-	@GetMapping("/byPackages/{packages}")
+	@GetMapping("/travel/byPackages/{packages}")
 	public List<Travel> byPackages(@PathVariable(value ="packages") String packages) {
 		return this.travelRepository.findAllByPackages(packages);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/travel/byContact/{contact}")
 	public List<Travel> byContact(@PathVariable(value ="contact") String contact) {
 		return this.travelRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/travel/byPicture/{picture}")
 	public List<Travel> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.travelRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/travel/byDescription/{description}")
 	public List<Travel> byDescription(@PathVariable(value ="description") String description) {
 		return this.travelRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byPrice/{price}")
+	@GetMapping("/travel/byPrice/{price}")
 	public List<Travel> byPrice(@PathVariable(value ="price") String price) {
 		return this.travelRepository.findAllByPrice(price);
 	}

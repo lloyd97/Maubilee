@@ -36,47 +36,47 @@ public class FoodController {
 		return this.foodRepository.findAll();
 	}
 	
-	@GetMapping("/byName/{name}")
+	@GetMapping("/food/byName/{name}")
 	public List<Food> byName(@PathVariable(value ="name") String name) {
 		return this.foodRepository.findAllByName(name);
 	}
 	
-	@GetMapping("/byEnddate/{enddate}")
+	@GetMapping("/food/byEnddate/{enddate}")
 	public List<Food> byDate(@PathVariable(value ="enddate") String enddate) {
 		return this.foodRepository.findAllByEnddate(enddate);
 	}
 	
-	@GetMapping("/byRegion/{region}")
+	@GetMapping("/food/byRegion/{region}")
 	public List<Food> byRegion(@PathVariable(value ="region") String region) {
 		return this.foodRepository.findAllByRegion(region);
 	}
 	
-	@GetMapping("/byType/{type}")
+	@GetMapping("/food/byType/{type}")
 	public List<Food> byType(@PathVariable(value ="type") String type) {
 		return this.foodRepository.findAllByType(type);
 	}
 	
-	@GetMapping("/byContact/{contact}")
+	@GetMapping("/food/byContact/{contact}")
 	public List<Food> byContact(@PathVariable(value ="contact") String contact) {
 		return this.foodRepository.findAllByContact(contact);
 	}
 	
-	@GetMapping("/byPicture/{picture}")
+	@GetMapping("/food/byPicture/{picture}")
 	public List<Food> byPicture(@PathVariable(value ="picture") String picture) {
 		return this.foodRepository.findAllByPicture(picture);
 	}
 	
-	@GetMapping("/byDescription/{description}")
+	@GetMapping("/food/byDescription/{description}")
 	public List<Food> byDescription(@PathVariable(value ="description") String description) {
 		return this.foodRepository.findAllByDescription(description);
 	}
 	
-	@GetMapping("/byPrice/{price}")
+	@GetMapping("/food/byPrice/{price}")
 	public List<Food> byPrice(@PathVariable(value ="price") String price) {
 		return this.foodRepository.findAllByPrice(price);
 	}
 	
-	@GetMapping("/byCategory/{category}")
+	@GetMapping("/food/byCategory/{category}")
 	public List<Food> byCategory(@PathVariable(value ="category") String category) {
 		return this.foodRepository.findAllByCategory(category);
 	}

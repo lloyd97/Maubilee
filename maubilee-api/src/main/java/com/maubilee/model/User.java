@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="maubileeuser")
+@Table(name="Account")
 public class User {
 
 	@Id
@@ -97,8 +97,8 @@ public class User {
 		return firstname;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstname(String name) {
+		this.firstname = name;
 	}
 
 	public String getLastname() {
